@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>俄罗斯游戏</title>
+		<style> 
+			#canvas {
+				background-color: black;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas width="500" height="500" id="canvas"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById('canvas');
+			var gc = canvas.getContext('2d');
+
+			var data = map(12,12);
+
+			function map(r,c) {
+				var data = [];
+
+				for(var i=0;i<r;i++) {
+					data.push([]);
+
+					for(var j=0;j<c;j++) {
+						data[i].push(0)
+					}
+				}
+
+				return data;
+			}
+		</script>
+	</body>
+</html>
